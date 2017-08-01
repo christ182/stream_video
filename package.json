@@ -1,0 +1,23 @@
+{
+  "name": "stream_video",
+  "version": "0.0.1",
+  "description": "Stream videos over the lan using cmd",
+  "main": "stream_video.js",
+  "dependencies": {
+    "express": "^4.15.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "stream_video /"
+  },
+  "keywords": [
+    "stream",
+    "video"
+  ],
+  "bin": {
+    "serve_video": "./bin/stream_video"
+  },
+  "author": "urbanpanda182",
+  "license": "ISC",
+  "preferGlobal": "true"
+}
