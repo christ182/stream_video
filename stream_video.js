@@ -1,7 +1,8 @@
 const express = require('express');
 const server = express();
 const os = require( 'os' );
-var fs = require( 'fs' );
+const mime = require( 'mime' );
+const fs = require( 'fs' );
 
 if(!process.argv[2]){
 	return console.log('Path is required');
@@ -11,8 +12,12 @@ const path = process.argv[2];
 server.get('/', (req, res) => {
 	fs.readdir(path, (err, files) =>{
 		let response = '';
+		
+
 		files.forEach((file) => {
-			response  += `<a href="/watch/${ file }"> ${ file }</a> <br />`;
+			if(mime.lookup(path + file).indexOf('video') !== -1){
+				response  += `<a href="/watch/${ file }"> ${ file }</a> <br />`;
+			}
 		});
 		res.send(response);
 	})

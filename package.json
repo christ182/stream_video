@@ -4,7 +4,8 @@
   "description": "Stream videos over the lan using cmd",
   "main": "stream_video.js",
   "dependencies": {
-    "express": "^4.15.3"
+    "express": "^4.15.3",
+    "mime": "^1.3.6"
   },
   "devDependencies": {},
   "scripts": {
@@ -15,7 +16,7 @@
     "video"
   ],
   "bin": {
-    "serve_video": "./bin/stream_video"
+    "stream_video": "./bin/stream_video"
   },
   "author": "urbanpanda182",
   "license": "ISC",
